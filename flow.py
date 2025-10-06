@@ -28,7 +28,7 @@ if car_choice in carnames and colour_choice in colours and model_choice in model
 if car_key in suggestions:
     proposed_car = suggestions[car_key]
     print(f"\nYou chose a {colour_choice} {car_choice} {model_choice}.")
-    print(f"💡 Based on your taste, we recommend: {proposed_car}!")
+    print(f"Based on your taste, we recommend: {proposed_car}")
     
 
 else:
