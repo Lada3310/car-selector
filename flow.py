@@ -1,11 +1,6 @@
 carnames = ['volvo', 'bmw', 'audi']
-a, b, c = carnames
-
 colours = ['red', 'blue', 'green', 'yellow']
-x, y, *z = colours
-
 models = ['sedan', 'suv', 'coupe']
-i, j, k = models
 
 car_choice = input(f'Choose a brand {carnames}')
 colour_choice = input(f'Choose a colour {colours}')
@@ -25,14 +20,17 @@ suggestions = {
     ('audi', 'coupe'): 'Audi TT',
 }
 
+
 if car_choice in carnames and colour_choice in colours and model_choice in models:
     car_key = (car_choice, model_choice)
-    if car_key in suggestions:
-        proposed_car = suggestions[car_key]
-        print(f"\nYou chose a {colour_choice} {car_choice} {model_choice}.")
-        print(f"💡 Based on your taste, we recommend: {proposed_car}!")
-    else:
-        print("Sorry, no matching car found in our database.")
-else:
-    print("Invalid choice. Please pick from the available options.")
+
+
+if car_key in suggestions:
+    proposed_car = suggestions[car_key]
+    print(f"\nYou chose a {colour_choice} {car_choice} {model_choice}.")
+    print(f"💡 Based on your taste, we recommend: {proposed_car}!")
     
+
+else:
+    print("Sorry, no matching car found in our database.")
+
